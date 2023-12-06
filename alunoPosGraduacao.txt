@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author 
+ */
+public class AlunoPosGraduacao extends Avaliacao{
+       Scanner in = new Scanner(System.in);
+
+    @Override
+    public void adicionarNota() {
+        System.out.println("Digite o peso da nota do primeiro semestre "); 
+        setPeso1(in.nextInt());
+        System.out.println("Digite sua primeira nota"); 
+        setNota1(in.nextDouble());
+        System.out.println("Digite o peso da nota do segundo semestre"); 
+        setPeso2(in.nextInt());
+        System.out.println("Digite sua segunda nota");   
+        setNota2(in.nextDouble());
+    }
+
+    @Override
+    public double calcularMedia() {
+        double media = (getNota1() * getPeso1() + getNota2() * getPeso2() ) / (getPeso1()  + getPeso2() );
+        System.out.println("Aluno de Pós-Graduação");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Curso: " + getCurso());
+        System.out.println("Média: " + media);
+        return media;
+    }
+
+
+} 

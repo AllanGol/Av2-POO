@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author lucas
+ */
+public class alunograduacao extends Avaliacao{
+     protected double media;
+      Scanner in = new Scanner(System.in);
+
+   
+    
+
+    
+   @Override
+   
+        public void adicionarNota(){
+        System.out.println("digite o peso da nota do primeiro semestre "); 
+       setPeso1(in.nextInt());
+        System.out.println("digite sua primeira nota"); 
+          setNota1(in.nextDouble());
+       System.out.println("digite o peso da nota do segundo semestre"); 
+        setPeso2(in.nextInt());
+          System.out.println("digite sua segunda nota");   
+          setNota2(in.nextDouble());
+              }
+    @Override
+    public double calcularMedia() {
+       setMedia((getNota1() * getPeso1() + getNota2() * getPeso2()) / (getPeso1() +getPeso2()));
+        System.out.println("Sua média foi do semestre foi de " + media);
+        return media;
+    }
+
+}

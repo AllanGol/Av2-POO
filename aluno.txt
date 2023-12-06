@@ -1,0 +1,149 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.provajava;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lucas
+ */
+public class aluno {
+    Scanner in= new Scanner (System.in);
+    private double notas,media,nota1,nota2;
+    private int peso1,peso2;
+    private char nome,curso;
+    
+
+    /**
+     * @return the notas
+     */
+    public double getNotas() {
+        return notas;
+    }
+
+    /**
+     * @return the nome
+     */
+    public char getNome() {
+        return nome;
+    }
+
+    /**
+     * @return the curso
+     */
+    public char getCurso() {
+        return curso;
+    }
+    
+    /**
+     *
+     */
+public class Aluno extends Avaliacao {
+    Scanner in = new Scanner(System.in);
+
+    // Construtores, getters e setters...
+
+    @Override
+    public void adicionarNota() {
+        System.out.println("Digite o peso do primeiro semestre");
+        setPeso1(in.nextInt());
+        System.out.println("Digite sua nota do primeiro semestre");
+        setNota1(in.nextDouble());
+
+        System.out.println("Digite o peso do segundo semestre");
+        setPeso2(in.nextInt());
+        System.out.println("Digite sua nota do segundo semestre");
+        setNota2(in.nextDouble());
+    }
+
+    @Override
+    public double calcularMedia() {
+        setMedia((getNota1() * getPeso1() + getNota2() * getPeso2()) / (getPeso1() + getPeso2()));
+        System.out.println("Sua média foi " + getMedia());
+        return getMedia();
+    }
+
+    // Métodos específicos da classe Aluno...
+}
+
+    /**
+     * @param notas the notas to set
+     */
+    public void setNotas(double notas) {
+        this.notas = notas;
+    }
+
+    /**
+     * @return the media
+     */
+    public double getMedia() {
+        return media;
+    }
+
+    /**
+     * @param media the media to set
+     */
+    public void setMedia(double media) {
+        this.media = media;
+    }
+
+    /**
+     * @return the nota1
+     */
+    public double getNota1() {
+        return nota1;
+    }
+
+    /**
+     * @param nota1 the nota1 to set
+     */
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    /**
+     * @return the nota2
+     */
+    public double getNota2() {
+        return nota2;
+    }
+
+    /**
+     * @param nota2 the nota2 to set
+     */
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+
+    /**
+     * @return the peso1
+     */
+    public int getPeso1() {
+        return peso1;
+    }
+
+    /**
+     * @param peso1 the peso1 to set
+     */
+    public void setPeso1(int peso1) {
+        this.peso1 = peso1;
+    }
+
+    /**
+     * @return the peso2
+     */
+    public int getPeso2() {
+        return peso2;
+    }
+
+    /**
+     * @param peso2 the peso2 to set
+     */
+    public void setPeso2(int peso2) {
+        this.peso2 = peso2;
+    }
+
+}
